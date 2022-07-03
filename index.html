@@ -14,9 +14,23 @@
 
   <!-- This site is optimized with the Yoast SEO plugin v19.1 - https://yoast.com/wordpress/plugins/seo/ -->
   <title>The Wedding of Nu'man & Suci</title>
-  <link rel = "icon" href = 
-  "https://delunaainvitation.com/wp-content/uploads/2022/06/IMG-20220628-WA0025.jpg" 
-          type = "image/x-icon">
+  <link rel="icon" href="https://delunaainvitation.com/wp-content/uploads/2022/06/IMG-20220628-WA0025.jpg"
+    type="image/x-icon" />
+
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Wedding of Nu'man &amp; Suci Sofyati">
+  <meta property="og:description" content="Minggu, 10 Juli 2022">
+  <meta property="og:url" content="https://ourevent.github.io/">
+  <meta property="og:site_name" content="Nu'man Invitation">
+  <meta property="og:updated_time" content="2022-06-28T12:35:10+00:00">
+  <meta property="og:image" content="https://delunaainvitation.com/wp-content/uploads/2022/06/IMG-20220628-WA0025.jpg">
+  <meta property="og:image:secure_url"
+    content="https://delunaainvitation.com/wp-content/uploads/2022/06/IMG-20220628-WA0025.jpg">
+  <meta property="og:image:width" content="768">
+  <meta property="og:image:height" content="768">
+  <meta property="og:image:alt" content="The Wedding of Nu'man &amp; Suci Sofyati">
+  <meta property="og:image:type" content="image/jpeg">
 
   <script type="module">
     // Import the functions you need from the SDKs you need
@@ -49,7 +63,7 @@
       child,
       update,
       remove,
-      push
+      push,
     } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
 
     const database = getDatabase();
@@ -59,32 +73,31 @@
     var ket = document.getElementById("ketBox");
     var dateNow = new Date(Date.now()).toLocaleString();
 
-
-    send.addEventListener('click', (e) => {
-        if (document.getElementById("nameBox").value.length == 0) {
-          document.getElementById("nameBox").required = true;
-        } else if (document.getElementById("ucapanBox").value.length == 0) {
-          document.getElementById("ucapanBox").required = true;
-        } else if (document.getElementById("ketBox").value.length == 0) {
-          document.getElementById("ketBox").required = true;
-        } else {
-          const userId = push(child(ref(database), 'undangan')).key;
-          set(ref(database, 'data/' + userId), {
-            nama: name.value,
-            ucapan: textUcapan.value,
-            ket: ket.value,
-            tanggal : dateNow
-          });
-          name.value = null;
-          textUcapan.value = null;
-          ket.value = ""
-          document.getElementById("thanks").style.visibility = "visible";
-          function hideText() {
-            document.getElementById("thanks").style.visibility = "hidden";
-          }
-          setTimeout(hideText, 5000);
+    send.addEventListener("click", (e) => {
+      if (document.getElementById("nameBox").value.length == 0) {
+        document.getElementById("nameBox").required = true;
+      } else if (document.getElementById("ucapanBox").value.length == 0) {
+        document.getElementById("ucapanBox").required = true;
+      } else if (document.getElementById("ketBox").value.length == 0) {
+        document.getElementById("ketBox").required = true;
+      } else {
+        const userId = push(child(ref(database), "undangan")).key;
+        set(ref(database, "data/" + userId), {
+          nama: name.value,
+          ucapan: textUcapan.value,
+          ket: ket.value,
+          tanggal: dateNow,
+        });
+        name.value = null;
+        textUcapan.value = null;
+        ket.value = "";
+        document.getElementById("thanks").style.visibility = "visible";
+        function hideText() {
+          document.getElementById("thanks").style.visibility = "hidden";
         }
-      });
+        setTimeout(hideText, 5000);
+      }
+    });
 
       // function insertData() {
       //   const userId = push(child(ref(db),'undangan')).key;
@@ -956,21 +969,33 @@
       color: #fef4e9;
       border: solid 1px #7b6945;
       background: #7b6945;
-      background: -webkit-gradient(linear, left top, left bottom, from(#7b6945), to(#7b6945));
+      background: -webkit-gradient(linear,
+          left top,
+          left bottom,
+          from(#7b6945),
+          to(#7b6945));
       background: -moz-linear-gradient(top, #7b6945, #7b6945);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7b6945', endColorstr='#7b6945');
     }
 
     .orange:hover {
       background: #7b6945;
-      background: -webkit-gradient(linear, left top, left bottom, from(#7b6945), to(#7b6945));
+      background: -webkit-gradient(linear,
+          left top,
+          left bottom,
+          from(#7b6945),
+          to(#7b6945));
       background: -moz-linear-gradient(top, #7b6945, #7b6945);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7b6945', endColorstr='#7b6945');
     }
 
     .orange:active {
       color: #fcd3a5;
-      background: -webkit-gradient(linear, left top, left bottom, from(#7b6945), to(#7b6945));
+      background: -webkit-gradient(linear,
+          left top,
+          left bottom,
+          from(#7b6945),
+          to(#7b6945));
       background: -moz-linear-gradient(top, #7b6945, #7b6945);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7b6945', endColorstr='#7b6945');
     }
@@ -1723,7 +1748,6 @@ protokol pencegahan penyebaran COVID-19</p>		</div>
               data-id="da33f37" data-element_type="widget" data-widget_type="weddingpress-commentkit.default">
               <div class="elementor-widget-container">
                 <div class="wdp-wrapper wdp-golden wdp-border wdp-full">
-                
                   <!--.wdp-wrap-link-->
                   <div id="wdp-wrap-commnent-3485" style="display: block">
                     <div id="wdp-wrap-form-3485" class="wdp-wrap-form wdp-clearfix">
@@ -1731,14 +1755,17 @@ protokol pencegahan penyebaran COVID-19</p>		</div>
                         <div id="respond-3485" class="respond wdp-clearfix">
                           <form method="post" id="commentform-3485">
                             <p class="comment-form-author wdp-field-1">
-                              <input id="nameBox" name="author" type="text" class="wdp-input"
-                                placeholder="Name" required/>
+                              <input id="nameBox" name="author" type="text" class="wdp-input" placeholder="Name"
+                                required />
                             </p>
                             <div class="wdp-wrap-textarea">
                               <textarea id="ucapanBox" class="waci_comment wdp-textarea autosize-textarea"
-                                name="comment" aria-required="true" placeholder="Tulis Ucapan &amp; Doa" rows="3"
-                                style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 70px;"
-                                spellcheck="false" required></textarea>
+                                name="comment" aria-required="true" placeholder="Tulis Ucapan &amp; Doa" rows="3" style="
+                                    overflow: hidden;
+                                    overflow-wrap: break-word;
+                                    resize: none;
+                                    height: 70px;
+                                  " spellcheck="false" required></textarea>
 
                               <div class="charleft wdp-counter-info">
                                 &nbsp;
@@ -1746,17 +1773,30 @@ protokol pencegahan penyebaran COVID-19</p>		</div>
                               <span class="wdp-required">*</span><span
                                 class="wdp-error-info wdp-error-info-text">Minimal 2 karakter.</span>
                             </div>
-                              <div class="wdp-wrap-select"><select class="waci_comment wdp-select" name="konfirmasi" id="ketBox" required>
-                                  <option value="" disabled="" selected="">Konfirmasi Kehadiran</option>
-                                  <option value="Hadir">Hadir</option>
-                                  <option value="Tidak hadir">Tidak hadir</option>
-                                  <option value="Masih Ragu">Masih Ragu</option>
-                                </select><span class="wdp-required">*</span><span class="wdp-error-info wdp-error-info-confirm">Silahkan pilih
-                                  konfirmasi kehadiran</span></div>
+                            <div class="wdp-wrap-select">
+                              <select class="waci_comment wdp-select" name="konfirmasi" id="ketBox" required>
+                                <option value="" disabled="" selected="">
+                                  Konfirmasi Kehadiran
+                                </option>
+                                <option value="Hadir">Hadir</option>
+                                <option value="Tidak hadir">
+                                  Tidak hadir
+                                </option>
+                                <option value="Masih Ragu">
+                                  Masih Ragu
+                                </option>
+                              </select><span class="wdp-required">*</span><span
+                                class="wdp-error-info wdp-error-info-confirm">Silahkan pilih konfirmasi kehadiran</span>
+                            </div>
 
-                                  <p style="visibility: hidden;" id="thanks">Terima kasih telah membantuku; Aku sangat menghargai kebaikan dan dukunganmu.</p><br>
-                          <button name="sendBtn" id="sendBtn" type="submit" class="orange">Kirim</button>
-
+                            <p style="visibility: hidden" id="thanks">
+                              Terima kasih telah membantuku; Aku sangat
+                              menghargai kebaikan dan dukunganmu.
+                            </p>
+                            <br />
+                            <button name="sendBtn" id="sendBtn" type="submit" class="orange">
+                              Kirim
+                            </button>
                           </form>
                         </div>
                       </div>
@@ -2302,9 +2342,7 @@ protokol pencegahan penyebaran COVID-19</p>		</div>
                 </script>
                 <div id="audio-container" class="audio-box">
                   <audio id="song" loop="">
-                    <source
-                      src="https://www.mboxdrive.com/background-music-beatiful-in-white.mp3"
-                      type="audio/mp3" />
+                    <source src="https://www.mboxdrive.com/background-music-beatiful-in-white.mp3" type="audio/mp3" />
                   </audio>
 
                   <div class="elementor-icon-wrapper" id="unmute-sound" style="display: none">
@@ -2620,7 +2658,7 @@ protokol pencegahan penyebaran COVID-19</p>		</div>
     const mykeysvalue = window.location.search;
     console.log(window.location.search);
     console.log(mykeysvalue);
-    const urlParams = new URLSearchParams(mykeysvalue.replace('&','+%26+'));
+    const urlParams = new URLSearchParams(mykeysvalue.replace("&", "+%26+"));
     console.log(urlParams);
     const param1 = urlParams.get("to");
     console.log(param1);
