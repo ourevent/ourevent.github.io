@@ -54,6 +54,7 @@
     var textUcapan = document.getElementById("ucapanBox");
     var send = document.getElementById("sendBtn");
     var ket = document.getElementById("ketBox");
+    var dateNow = new Date(Date.now()).toLocaleString();
 
 
     send.addEventListener('click', (e) => {
@@ -66,19 +67,19 @@
         } else {
           const userId = push(child(ref(database), 'undangan')).key;
           set(ref(database, 'data/' + userId), {
-            Name: name.value,
-            Ucapan: textUcapan.value,
-            Ket: ket.value
+            nama: name.value,
+            ucapan: textUcapan.value,
+            ket: ket.value,
+            tanggal : dateNow
           });
           name.value = null;
           textUcapan.value = null;
-          ket.value = null
+          ket.value = ""
           document.getElementById("thanks").style.visibility = "visible";
           function hideText() {
             document.getElementById("thanks").style.visibility = "hidden";
           }
           setTimeout(hideText, 5000);
-
         }
       });
 
