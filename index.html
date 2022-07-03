@@ -53,15 +53,34 @@
     var name = document.getElementById("nameBox");
     var textUcapan = document.getElementById("ucapanBox");
     var send = document.getElementById("sendBtn");
+    var ket = document.getElementById("ketBox");
 
 
     send.addEventListener('click', (e) => {
-      const userId = push(child(ref(database), 'undangan')).key;
-      set(ref(database, 'data/' + userId), {
-        Name: name.value,
-        Ucapan: textUcapan.value,
+        if (document.getElementById("nameBox").value.length == 0) {
+          document.getElementById("nameBox").required = true;
+        } else if (document.getElementById("ucapanBox").value.length == 0) {
+          document.getElementById("ucapanBox").required = true;
+        } else if (document.getElementById("ketBox").value.length == 0) {
+          document.getElementById("ketBox").required = true;
+        } else {
+          const userId = push(child(ref(database), 'undangan')).key;
+          set(ref(database, 'data/' + userId), {
+            Name: name.value,
+            Ucapan: textUcapan.value,
+            Ket: ket.value
+          });
+          name.value = null;
+          textUcapan.value = null;
+          ket.value = null
+          document.getElementById("thanks").style.visibility = "visible";
+          function hideText() {
+            document.getElementById("thanks").style.visibility = "hidden";
+          }
+          setTimeout(hideText, 5000);
+
+        }
       });
-    });
 
       // function insertData() {
       //   const userId = push(child(ref(db),'undangan')).key;
@@ -1708,15 +1727,14 @@ protokol pencegahan penyebaran COVID-19</p>		</div>
                         <div id="respond-3485" class="respond wdp-clearfix">
                           <form method="post" id="commentform-3485">
                             <p class="comment-form-author wdp-field-1">
-                              <input id="nameBox" name="author" type="text" aria-required="true" class="wdp-input"
-                                placeholder="Name" /><span class="wdp-required">*</span><span
-                                class="wdp-error-info wdp-error-info-name">Mohon maaf! Khusus untuk tamu undangan</span>
+                              <input id="nameBox" name="author" type="text" class="wdp-input"
+                                placeholder="Name" required/>
                             </p>
                             <div class="wdp-wrap-textarea">
                               <textarea id="ucapanBox" class="waci_comment wdp-textarea autosize-textarea"
                                 name="comment" aria-required="true" placeholder="Tulis Ucapan &amp; Doa" rows="3"
                                 style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 70px;"
-                                spellcheck="false"></textarea>
+                                spellcheck="false" required></textarea>
 
                               <div class="charleft wdp-counter-info">
                                 &nbsp;
@@ -1724,39 +1742,18 @@ protokol pencegahan penyebaran COVID-19</p>		</div>
                               <span class="wdp-required">*</span><span
                                 class="wdp-error-info wdp-error-info-text">Minimal 2 karakter.</span>
                             </div>
-
-                            <div class="wdp-wrap-select">
-                              <!-- <select
-                                  class="waci_comment wdp-select"
-                                  name="konfirmasi"
-                                  required=""
-                                >
-                                  <option value="" disabled="" selected="">
-                                    Konfirmasi Kehadiran
-                                  </option>
+                              <div class="wdp-wrap-select"><select class="waci_comment wdp-select" name="konfirmasi" id="ketBox" required>
+                                  <option value="" disabled="" selected="">Konfirmasi Kehadiran</option>
                                   <option value="Hadir">Hadir</option>
-                                  <option value="Tidak hadir">
-                                    Tidak hadir
-                                  </option></select
-                                ><span class="wdp-required">*</span
-                                ><span
-                                  class="wdp-error-info wdp-error-info-confirm"
-                                  >Silahkan pilih konfirmasi kehadiran</span
-                                >
-                              </div> -->
-                              <!-- <div class="wdp-wrap-submit wdp-clearfix">
-                                
-                                <p class="form-submit">
-                                  <input
-                                    name="submit"
-                                    id="sendBtn"
-                                    value="Kirim"
-                                    type="submit"
-                                  />
-                                </p> 
-                              </div> -->
+                                  <option value="Tidak hadir">Tidak hadir</option>
+                                  <option value="Masih Ragu">Masih Ragu</option>
+                                </select><span class="wdp-required">*</span><span class="wdp-error-info wdp-error-info-confirm">Silahkan pilih
+                                  konfirmasi kehadiran</span></div>
+
+                                  <p style="visibility: hidden;" id="thanks">Terima kasih telah membantuku; Aku sangat menghargai kebaikan dan dukunganmu.</p><br>
+                          <button name="sendBtn" id="sendBtn" type="submit" class="orange">Kirim</button>
+
                           </form>
-                          <button name="sendBtn" id="sendBtn" type="button" class="orange">Kirim</button>
                         </div>
                       </div>
                       <!--.wdp-container-form-->
@@ -2302,7 +2299,7 @@ protokol pencegahan penyebaran COVID-19</p>		</div>
                 <div id="audio-container" class="audio-box">
                   <audio id="song" loop="">
                     <source
-                      src="https://cengkirgrafika.com/wp-content/uploads/2021/07/y2mate.com-Marry-Your-Daughter-Brian-McKnight-animation_jP6eEKrghGI.mp3"
+                      src="https://www.mboxdrive.com/background-music-beatiful-in-white.mp3"
                       type="audio/mp3" />
                   </audio>
 
