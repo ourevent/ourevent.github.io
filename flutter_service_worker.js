@@ -5,8 +5,8 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "6b4d0d8e628f428e227f49055b0ada20",
 "favicon.ico": "7aa55f8f4b52452d48c1557887b2fd57",
-"index.html": "54ed34b6195835c872936730dbc783df",
-"/": "54ed34b6195835c872936730dbc783df",
+"index.html": "6c4870077c70ad34d8d32e1b0456734d",
+"/": "6c4870077c70ad34d8d32e1b0456734d",
 "main.dart.js": "4d47a3b3d33bf9934880de828ceb8dd2",
 "flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
 "script.js": "0f122e53b18cac26f4f75ba71657c4ff",
@@ -16,7 +16,6 @@ const RESOURCES = {
 "assets/AssetManifest.json": "89bf8ce4ab723a8ec2a85fdbfe3c609d",
 "assets/NOTICES": "f24d960478b91dbfc37cd46ea58e10f7",
 "assets/FontManifest.json": "9e30e826ade7f87e1afa9eb14e42b269",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/assets/audio/audio.mp3": "1b421ff14e20c547cb344113bda28435",
 "assets/assets/font/Montserrat-Medium.ttf": "b3ba703c591edd4aad57f8f4561a287b",
