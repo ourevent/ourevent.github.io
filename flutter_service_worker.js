@@ -5,8 +5,8 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "6b4d0d8e628f428e227f49055b0ada20",
 "favicon.ico": "7aa55f8f4b52452d48c1557887b2fd57",
-"index.html": "6c4870077c70ad34d8d32e1b0456734d",
-"/": "6c4870077c70ad34d8d32e1b0456734d",
+"index.html": "9b6fb0fb2f12db358a63ee0cb8d63229",
+"/": "9b6fb0fb2f12db358a63ee0cb8d63229",
 "main.dart.js": "4d47a3b3d33bf9934880de828ceb8dd2",
 "flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
 "script.js": "0f122e53b18cac26f4f75ba71657c4ff",
@@ -14,6 +14,7 @@ const RESOURCES = {
 "manifest.json": "1cabd6a6b3dd483445c3723cb75ccb42",
 "main.dart.js_1.part.js": "f8bec764ac5fdc1438ce90599dae8d3d",
 "assets/AssetManifest.json": "89bf8ce4ab723a8ec2a85fdbfe3c609d",
+"assets/loading.gif": "399cf2156e117698205259a2e372edb3",
 "assets/NOTICES": "f24d960478b91dbfc37cd46ea58e10f7",
 "assets/FontManifest.json": "9e30e826ade7f87e1afa9eb14e42b269",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
